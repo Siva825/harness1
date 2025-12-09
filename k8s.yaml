@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: c26
-        image: siva2626/flask10:v1
+        image: docker.io/siva2626/flask10:v1
         ports:
         - containerPort: 5000
