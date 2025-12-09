@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: nginx-deployment
+  labels: 
+    app: nginx
+spec:
+  replicas: 3
+  selector: 
+    matchLabels:
+      app: frontend
+  template: 
+    metadata:
+      name: pod1
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - name: c2
+        image: siva2626/flask10:v1
+        ports:
+        - containerPort: 5000
