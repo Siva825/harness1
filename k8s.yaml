@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata: 
   name: flask-deploy
+  namespace: siva-k8s  # <-- Added namespace here
   labels: 
     app: python-app
 spec:
