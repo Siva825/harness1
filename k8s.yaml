@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: c27
-        image: us-east1-docker.pkg.dev/siva-477505/repo1/flask10:v1
+        image: us-east1-docker.pkg.dev/siva-477505/repo1/flask1010:v1
         ports:
         - containerPort: 5000
