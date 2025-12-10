@@ -16,4 +16,19 @@ resource "google_compute_instance" "instance1" {
            //
         }
     }
+    metadata_startup_script = <<-EOT
+    #!/bin/bash
+
+    # Install Docker using official script (more reliable)
+    curl -fsSL https://get.docker.com -o get-docker.sh
+    sudo sh get-docker.sh
+        
+    # Start and enable Docker
+    sudo systemctl enable docker
+    sudo systemctl start docker
+        
+    # Wait for Docker to be ready
+    sleep 30
+
+    EOT
 }
