@@ -1,7 +1,7 @@
 provider "google" {
     project = "siva-477505" 
 }
-resource "google_compute_instance" "instance1" {
+resource "google_compute_instance" "instance2" {
     name = "vm-26"
     zone =  "us-central1-c" 
     machine_type = "e2-medium"
