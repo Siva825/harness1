@@ -1,23 +1,21 @@
-
 apiVersion: apps/v1
 kind: Deployment
-metadata: 
+metadata:
   name: flask-deploy
   namespace: siva-k8s
-  labels: 
+  labels:
     app: python-app
 spec:
   replicas: 2
-  selector: 
+  selector:
     matchLabels:
       app: frontend
-  template: 
+  template:
     metadata:
-      name: pod2
       labels:
         app: frontend
     spec:
-      ImagePullSecrets:
+      imagePullSecrets:
         - name: gar-connection
       containers:
       - name: c28
