@@ -19,6 +19,6 @@ spec:
         - name: gar-connection
       containers:
       - name: c28
-        image: us-east1-docker.pkg.dev/siva-477505/repo1/flask2626:v1
+        image: us-east1-docker.pkg.dev/siva-477505/repo1/img:v1
         ports:
         - containerPort: 5000
