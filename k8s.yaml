@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: flask-deploy
-  namespace: sujith
+  namespace: siva-k8s
   labels:
     app: python-app
 spec:
@@ -15,8 +15,8 @@ spec:
       labels:
         app: frontend
     spec:
-      #imagePullSecrets:
-        #- name: gar-connection
+      imagePullSecrets:
+        - name: gar-connection
       containers:
       - name: c23
         image: us-east1-docker.pkg.dev/siva-477505/repo1/img2626:v1
