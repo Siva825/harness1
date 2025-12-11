@@ -1,8 +1,4 @@
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: siva-k8s
----
+
 apiVersion: apps/v1
 kind: Deployment
 metadata: 
@@ -21,6 +17,8 @@ spec:
       labels:
         app: frontend
     spec:
+      ImagePullSecrets:
+        - name: gar-connection
       containers:
       - name: c28
         image: us-east1-docker.pkg.dev/siva-477505/repo1/flask2626:v1
