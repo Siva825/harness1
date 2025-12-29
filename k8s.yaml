@@ -18,7 +18,7 @@ spec:
       imagePullSecrets:
         - name: gar-connection
       containers:
-      - name: c23
-        image: us-east1-docker.pkg.dev/siva-477505/repo1/img2626:v1
+      - name: c26
+        image: siva2626/spk:v1
         ports:
-        - containerPort: 5000
+        - containerPort: 8080
