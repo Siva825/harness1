@@ -4,7 +4,7 @@ metadata:
   name:  spc1
   #namespace: siva-k8s
   labels:
-    app: spk-app
+    app: frontend
 spec:
   replicas: 2
   selector:
@@ -16,7 +16,7 @@ spec:
         app: frontend
     spec: 
       containers:
-      - name: c26
+      - name: c30
         image: siva2626/spk:v1
         ports:
         - containerPort: 8080
@@ -24,11 +24,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: flask-service
+  name: spc-service
 spec:
   selector:
     app: frontend
   type: NodePort
   ports:
     - targetPort: 8080
-      port: 82
+      port: 83
