@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name:  spc1
-  namespace: siva-k8s
+  #namespace: siva-k8s
   labels:
     app: spk-app
 spec:
