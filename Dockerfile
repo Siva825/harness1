@@ -1,7 +1,5 @@
-FROM python:3.9-slim
-RUN apt update
-RUN pip install flask
+FROM eclipse-temurin:21-jdk
 WORKDIR /app
-COPY . .
-EXPOSE 5000
-ENTRYPOINT ["python", "app.py"]
+ADD https://storage.googleapis.com/siva-gcs/sp /app/sp.jar
+EXPOSE 8080
+CMD ["java", "-jar", "sp.jar"]
