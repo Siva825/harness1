@@ -4,7 +4,7 @@ metadata:
   name: flask-deploy
   namespace: siva-k8s
   labels:
-    app: python-app
+    app: spk-app
 spec:
   replicas: 2
   selector:
@@ -14,9 +14,7 @@ spec:
     metadata:
       labels:
         app: frontend
-    spec:
-      imagePullSecrets:
-        - name: gar-connection
+    spec: 
       containers:
       - name: c26
         image: siva2626/spk:v1
