@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: spc1
-  namespace: default
+  namespace: siva-k8s
   labels:
     app: frontend
 spec:
@@ -31,4 +31,4 @@ spec:
   type: NodePort
   ports:
     - targetPort: 8080
-      port: 83
+      port: 84
