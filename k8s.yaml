@@ -1,8 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name:  spc1
-  namespace: siva-k8s
+  name: spc1
+  namespace: default
   labels:
     app: frontend
 spec:
@@ -16,7 +16,7 @@ spec:
         app: frontend
     spec: 
       containers:
-      - name: c30
+      - name: c10
         image: siva2626/spk:v1
         ports:
         - containerPort: 8080
