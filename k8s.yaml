@@ -17,7 +17,7 @@ spec:
     spec: 
       containers:
       - name: c30
-        image: siva2626/spk:v1
+        image: siva2626/spk:v2
         ports:
         - containerPort: 8080
 
