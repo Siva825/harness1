@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: spc1
+  name: spk
   namespace: default
   labels:
     app: frontend
@@ -17,19 +17,19 @@ spec:
     spec: 
       containers:
       - name: c30
-        image: siva2626/flask10:v1
+        image: siva2626/spk:v1
         ports:
-        - containerPort: 5000
+        - containerPort: 8080
 
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: f1-service
+  name: spk-service
 spec:
   selector:
     app: frontend
   type: NodePort
   ports:
-    - targetPort: 5000
+    - targetPort: 8080
       port: 84
